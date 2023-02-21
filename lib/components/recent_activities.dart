@@ -1,3 +1,4 @@
+import 'package:alurabank/components/box_card.dart';
 import 'package:flutter/material.dart';
 
 class RecentActivities extends StatelessWidget {
@@ -7,13 +8,8 @@ class RecentActivities extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Container(
-        decoration: const BoxDecoration(
-            color: Color.fromRGBO(75, 75, 75, 1),
-            borderRadius: BorderRadius.all(Radius.circular(10))),
-        height: 233,
-        padding: EdgeInsets.all(16),
-        child: Column(
+      child: BoxCard(
+        boxContent: Column(
           children: [
             InOut(),
             Limit(),
