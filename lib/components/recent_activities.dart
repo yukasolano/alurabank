@@ -13,9 +13,7 @@ class RecentActivities extends StatelessWidget {
           children: [
             InOut(),
             Limit(),
-            Divider(
-              color: Colors.white,
-            ),
+            Divider(),
             Tips()
           ],
         ),
@@ -67,12 +65,12 @@ class InOutItem extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+              fontSize: 16, fontWeight: FontWeight.w400),
         ),
         Text(
           value,
           style: TextStyle(
-              fontSize: 28, fontWeight: FontWeight.w700, color: Colors.white),
+              fontSize: 28, fontWeight: FontWeight.w700),
         )
       ],
     );
@@ -90,7 +88,7 @@ class Limit extends StatelessWidget {
         const Text(
           "Expenses limit: \$432.93",
           style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+              fontSize: 16, fontWeight: FontWeight.w400),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 8),
@@ -120,7 +118,7 @@ class Tips extends StatelessWidget {
         Text(
           "You've spent \$1500.00 with games this month. Try to reduce this expense.",
           style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+              fontSize: 16, fontWeight: FontWeight.w400),
         ),
         Padding(
           padding: EdgeInsets.fromLTRB(8, 16, 16, 8),

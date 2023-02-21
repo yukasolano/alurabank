@@ -29,28 +29,26 @@ class Header extends StatelessWidget {
                 RichText(
                   text: const TextSpan(
                     text: '\$ ',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
+                    style: TextStyle(fontSize: 16),
                     children: <TextSpan>[
                       TextSpan(
                         text: '1000.00',
                         style: TextStyle(
                             fontSize: 28,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white),
+                            fontWeight: FontWeight.w700,),
                       ),
                     ],
                   ),
                 ),
                 const Text(
                   "Available balance",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 16),
                 )
               ],
             ),
             const Icon(
               Icons.account_circle,
               size: 35,
-              color: Colors.white,
             )
           ],
         ),

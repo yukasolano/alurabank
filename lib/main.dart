@@ -10,6 +10,10 @@ class Alurabank extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Alurabank", home: HomeScreen());
+    return MaterialApp(
+      title: "Alurabank",
+      theme: ThemeData.dark(),
+      home: const HomeScreen(),
+    );
   }
 }
