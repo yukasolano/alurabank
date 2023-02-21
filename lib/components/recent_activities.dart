@@ -29,8 +29,52 @@ class InOut extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [Text("Input"), Text("Output")],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: const [
+          InOutItem(
+            title: "Output",
+            value: "\$9900.97",
+            color: Color.fromRGBO(255, 175, 29, 1),
+          ),
+          InOutItem(
+            title: "Input",
+            value: "\$9332.35",
+            color: Color.fromRGBO(191, 69, 198, 1),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class InOutItem extends StatelessWidget {
+  final String title;
+  final String value;
+  final Color color;
+
+  const InOutItem(
+      {Key? key, required this.title, required this.value, required this.color})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+              fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
+        ),
+        Text(
+          value,
+          style: TextStyle(
+              fontSize: 28, fontWeight: FontWeight.w700, color: Colors.white),
+        )
+      ],
     );
   }
 }
