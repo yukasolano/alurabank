@@ -123,7 +123,7 @@ class Tips extends StatelessWidget {
               fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
         ),
         Padding(
-          padding: EdgeInsets.fromLTRB(24, 16, 16, 24),
+          padding: EdgeInsets.fromLTRB(8, 16, 16, 8),
           child: Text("Tell me how",
               style: TextStyle(
                 fontSize: 16,

@@ -8,9 +8,10 @@ class BoxCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-          color: Color.fromRGBO(75, 75, 75, 1),
-          borderRadius: BorderRadius.all(Radius.circular(10))),
+      decoration: BoxDecoration(
+          boxShadow: kElevationToShadow[3],
+          color: const Color.fromRGBO(75, 75, 75, 1),
+          borderRadius: BorderRadius.circular(10)),
       padding: const EdgeInsets.all(16),
       child: boxContent,
     );
