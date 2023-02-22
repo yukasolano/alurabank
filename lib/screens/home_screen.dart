@@ -1,3 +1,4 @@
+import 'package:alurabank/components/account_actions.dart';
 import 'package:flutter/material.dart';
 
 import '../components/recent_activities.dart';
@@ -10,10 +11,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          decoration: const BoxDecoration(color: Color.fromRGBO(55, 55, 55, 1)),
+        decoration: const BoxDecoration(color: Color.fromRGBO(55, 55, 55, 1)),
+        child: Material(
           child: Column(
-            children: const [Header(), RecentActivities()],
-          )),
+            children: const [Header(), RecentActivities(), AccountActions()],
+          ),
+        ),
+      ),
     );
   }
 }
