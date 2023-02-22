@@ -1,4 +1,5 @@
 import 'package:alurabank/components/box_card.dart';
+import 'package:alurabank/components/color_dot.dart';
 import 'package:alurabank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -55,9 +56,14 @@ class InOutItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [Text(title), Text(value, style: Theme.of(context).textTheme.bodyLarge,)],
+    return Row(
+      children: [
+        ColorDot(color: color!),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [Text(title), Text(value, style: Theme.of(context).textTheme.bodyLarge,)],
+        ),
+      ],
     );
   }
 }
