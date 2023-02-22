@@ -13,4 +13,6 @@ class ThemeColors {
     "expense": Color.fromRGBO(255, 175, 29, 1),
     "income": Color.fromRGBO(191, 69, 198, 1)
   };
+
+  static const divider = Color.fromRGBO(166, 166, 166, 1);
 }
