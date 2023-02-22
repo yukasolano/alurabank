@@ -5,6 +5,7 @@ ThemeData myTheme = ThemeData(
   primaryColor: ThemeColors.primaryColor,
   primarySwatch: ThemeColors.primaryColor,
   brightness: Brightness.dark,
+  fontFamily: "Raleway",
   textTheme: const TextTheme(
       bodyMedium: TextStyle(fontSize: 16),
       bodyLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
