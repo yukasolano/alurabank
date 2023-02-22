@@ -1,4 +1,5 @@
 import 'package:alurabank/components/box_card.dart';
+import 'package:alurabank/components/section_title.dart';
 import 'package:flutter/material.dart';
 
 class AccountActions extends StatelessWidget {
@@ -9,13 +10,7 @@ class AccountActions extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
-          child: Text(
-            "Account actions",
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-        ),
+        const SectionTitle(title: "Account actions"),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [

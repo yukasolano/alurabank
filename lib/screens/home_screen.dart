@@ -1,8 +1,8 @@
-import 'package:alurabank/components/account_actions.dart';
+import 'package:alurabank/components/sections/account_actions.dart';
 import 'package:flutter/material.dart';
 
-import '../components/recent_activities.dart';
-import '../components/header.dart';
+import '../components/sections/recent_activities.dart';
+import '../components/sections/header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
