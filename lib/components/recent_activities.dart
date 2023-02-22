@@ -1,4 +1,5 @@
 import 'package:alurabank/components/box_card.dart';
+import 'package:alurabank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class RecentActivities extends StatelessWidget {
@@ -10,12 +11,7 @@ class RecentActivities extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: BoxCard(
         boxContent: Column(
-          children: [
-            InOut(),
-            Limit(),
-            Divider(),
-            Tips()
-          ],
+          children: [InOut(), Limit(), Divider(), Tips()],
         ),
       ),
     );
@@ -31,16 +27,16 @@ class InOut extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           InOutItem(
-            title: "Output",
+            title: "Expense",
             value: "\$9900.97",
-            color: Color.fromRGBO(255, 175, 29, 1),
+            color: ThemeColors.recentActivity["expense"],
           ),
           InOutItem(
-            title: "Input",
+            title: "Income",
             value: "\$9332.35",
-            color: Color.fromRGBO(191, 69, 198, 1),
+            color: ThemeColors.recentActivity["income"],
           ),
         ],
       ),
@@ -51,7 +47,7 @@ class InOut extends StatelessWidget {
 class InOutItem extends StatelessWidget {
   final String title;
   final String value;
-  final Color color;
+  final Color? color;
 
   const InOutItem(
       {Key? key, required this.title, required this.value, required this.color})
@@ -61,18 +57,7 @@ class InOutItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400),
-        ),
-        Text(
-          value,
-          style: TextStyle(
-              fontSize: 28, fontWeight: FontWeight.w700),
-        )
-      ],
+      children: [Text(title), Text(value, style: Theme.of(context).textTheme.bodyLarge,)],
     );
   }
 }
@@ -85,11 +70,7 @@ class Limit extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          "Expenses limit: \$432.93",
-          style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400),
-        ),
+        const Text("Expenses limit: \$432.93"),
         Padding(
           padding: const EdgeInsets.only(top: 8),
           child: ClipRRect(
@@ -116,16 +97,11 @@ class Tips extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const [
         Text(
-          "You've spent \$1500.00 with games this month. Try to reduce this expense.",
-          style: TextStyle(
-              fontSize: 16, fontWeight: FontWeight.w400),
-        ),
+            "You've spent \$1500.00 with games this month. Try to reduce this expense."),
         Padding(
           padding: EdgeInsets.fromLTRB(8, 16, 16, 8),
           child: Text("Tell me how",
               style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
                 color: Color.fromRGBO(178, 12, 187, 1),
               )),
         )
